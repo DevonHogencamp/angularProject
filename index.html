@@ -7,12 +7,11 @@
         <!-- Load script at top because angular has to be loaded before it can template the page -->
         <script src="lib/angular/angular.min.js"></script>
         <script src="js/controllers.js"></script>
+        <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
         <div ng-controller="MyController">
-            <h1>{{ author.name }}</h1>
-
-            <p>{{ author.title + ', ' + author.company }}</p>
+            
         </div>
     </body>
 </html>
