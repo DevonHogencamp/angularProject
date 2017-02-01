@@ -6,22 +6,18 @@
         <title>Angular Project</title>
         <!-- Load script at top because angular has to be loaded before it can template the page -->
         <script src="lib/angular/angular.min.js"></script>
+        <!-- Angular router -->
+        <script src="lib/angular/angular-route.min.js"></script>
+        <!-- Our main app is handled here -->
+        <script src="js/app.js"></script>
+        <!-- Controller -->
         <script src="js/controllers.js"></script>
+        <!-- Stylesheet -->
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <div class="main" ng-controller="MyController">
-            <ul class="artistlist">
-                <li class="artist cf" ng-repeat="item in artists">
-                    <img ng-src="images/{{ item.shortname }}_tn.jpg" alt="Photo Of {{ item.name }}">
+        <div class="main" ng-view>
 
-                    <div class="info">
-                        <h2>{{ item.name | uppercase}}</h2>
-
-                        <h3>{{ item.reknown }}</h3>
-                    </div>
-                </li>
-            </ul>
         </div>
     </body>
 </html>
