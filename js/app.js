@@ -14,7 +14,7 @@ myApp.config(['$routeProvider', function ($routeProvider) {
     // Config our routes
     $routeProvider.when('/list', {
         templateUrl: 'partials/list.html',
-        controller: 'js/ListController.js'
+        controller: 'ListController'
     }).
     otherwise({
         redirectTo: '/list'
