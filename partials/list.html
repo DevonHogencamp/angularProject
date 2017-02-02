@@ -1,7 +1,7 @@
 <section class="artistpage">
     <div class="search">
         <h1>Artists Directory</h1>
-        <label>Search: </label>
+        <label class="formgroup">Search: </label>
         <!-- The query attaches itself to the list of artists to allow us to search -->
         <input placeholder="Search for artists" autofocus ng-model="query">
 
@@ -28,6 +28,9 @@
         <!-- A for loop that itterates through all of the artists -->
         <!-- The query is attached to the inputs query -->
         <li class="artist cf" ng-repeat="item in artists | filter: query | orderBy: artistOrder:direction">
+            <!-- Hyperlink to the details page -->
+            <a href="#!/details/{{ artists.indexOf(item) }}"></a>
+
             <img ng-src="images/{{ item.shortname }}_tn.jpg" alt="Photo Of {{ item.name }}">
 
             <div class="info">
