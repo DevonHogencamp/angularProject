@@ -29,9 +29,8 @@
         <!-- The query is attached to the inputs query -->
         <li class="artist cf" ng-repeat="item in artists | filter: query | orderBy: artistOrder:direction">
             <!-- Hyperlink to the details page -->
-            <a href="#!/details/{{ artists.indexOf(item) }}"></a>
-
-            <img ng-src="images/{{ item.shortname }}_tn.jpg" alt="Photo Of {{ item.name }}">
+            <a href="#!/details/{{ artists.indexOf(item) }}">
+                <img ng-src="images/{{ item.shortname }}_tn.jpg" alt="Photo Of {{ item.name }}">
 
             <div class="info">
                 <!-- This filters into uppercase -->
@@ -39,6 +38,7 @@
 
                 <h3>{{ item.reknown }}</h3>
             </div>
+            </a>
         </li>
     </ul>
 </section>
