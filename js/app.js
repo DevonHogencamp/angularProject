@@ -21,6 +21,10 @@ myApp.config(['$routeProvider', function ($routeProvider) {
         templateUrl: 'partials/details.html',
         controller: 'DetailsController'
     }).
+    when('/apply', {
+        templateUrl: 'partials/apply.html',
+        controller: 'ApplyController'
+    }).
     otherwise({
         redirectTo: '/list'
     });

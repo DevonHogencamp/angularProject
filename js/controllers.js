@@ -38,3 +38,9 @@ artistControllers.controller('DetailsController', ['$scope', '$http', '$routePar
             console.log('HTTP request failed with result: ' + err);
         });
 }]);
+
+artistControllers.controller('ApplyController', ['$scope', function ($scope) {
+    $scope.register = function () {
+            $scope.message = 'Thank you for applying!';
+        };
+}]);

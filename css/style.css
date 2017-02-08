@@ -42,6 +42,10 @@ q:before, q:after, blockquote:before, blockquote:after {
     content: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 a img {
     border: none;
 }
@@ -96,7 +100,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    color: #145266;
+    color: white;
     font-family: Bree Serif, serif;
 }
 
@@ -190,7 +194,7 @@ a.small {
     display: none;
 }
 
-.search input {
+input {
     font-family: 'Droid Sans', sans-serif;
     width: 100%;
     padding: 10px 0 10px 15px;
@@ -202,7 +206,7 @@ a.small {
     outline: 0;
 }
 
-.search .formgroup input {
+ input {
     border: 1px solid rgba(0, 0, 0, 0.3);
     display: inline;
     width: auto;
@@ -327,4 +331,31 @@ a.small {
     opacity: 0;
     height: 0px;
     overflow: hidden;
+}
+
+.search button {
+    font-family: 'Droid Sans', sans-serif;
+    width: 50%;
+    color: #a8a9a9;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    outline: 0;
+    margin: 5px;
+}
+
+.search button:hover {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.apply {
+    color: rgb(238, 232, 213);
+    width: 90%;
+    min-width: 320px;
+    max-width: 500px;
+    z-index: 20;
+    background: rgb(6, 54, 66);
+    margin: 30px auto 0px;
+    border-radius: 20px;
+    padding: 20px 30px;
 }
