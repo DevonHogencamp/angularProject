@@ -4,12 +4,34 @@
 
         <p>Please fill out the following form</p>
 
+        <p ng-show="message">{{ message }}</p>
+
         <!-- Name, Reknown, Bio, Email, and Phone -->
 
         <fieldset>
-            <input type='text' name='name' placeholder="Name" autofocus="true" ng-required='true'>
+            <input type='text' name='name' placeholder="Name" autofocus="true" ng-required='true' ng-model="user.name">
 
-            <p ng-show='applyForm.name.$invalid'>Your must fill out name</p>
+            <p ng-show='applyForm.name.$invalid && applyForm.name.$touched'>Your must fill out name</p>
+
+            <input type='text' name='reknown' placeholder="Reknown" ng-required='true' ng-model="user.reknown">
+
+            <p ng-show='applyForm.reknown.$invalid && applyForm.reknown.$touched'>Your must fill out reknown</p>
+
+            <input type='text' name='bio' placeholder="Bio" ng-required='true' ng-model="user.bio">
+
+            <p ng-show='applyForm.bio.$invalid && applyForm.bio.$touched'>Your must fill out bio</p>
+
+            <input type='email' name='email' placeholder="Email" ng-required='true' ng-model="user.email">
+
+            <p ng-show='applyForm.email.$invalid && applyForm.email.$touched'>Your must fill out email</p>
+
+            <input type='tel' name='tel' placeholder="Telephone" ng-required='true' ng-model="user.tel">
+
+            <p ng-show='applyForm.tel.$invalid && applyForm.tel.$touched'>Your must fill out telephone</p>
         </fieldset>
+
+        <button type="submit" class="btn" name="button">Submit</button>
+
+        <button type="reset" class="btnCancel" name="button">Cancel</button>
     </form>
 </section>
