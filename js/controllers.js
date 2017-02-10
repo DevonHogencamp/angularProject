@@ -39,17 +39,8 @@ artistControllers.controller('DetailsController', ['$scope', '$http', '$routePar
         });
 }]);
 
-artistControllers.controller('ApplyController', ['$scope', '$http', function ($scope, $http) {
-    $http.get('js/data.json')
-        .then(function (res) {
-            $scope.artists = res.data;
-        }, function (err) {
-            console.log('HTTP request failed with result: ' + err);
-        });
-
+artistControllers.controller('ApplyController', ['$scope', function ($scope) {
     $scope.apply = function () {
         $scope.message = 'Thank you for applying ' + $scope.user.name + '!';
-
-        
     };
 }]);
